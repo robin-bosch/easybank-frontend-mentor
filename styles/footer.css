@@ -2,7 +2,7 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding:3vw 10vw;
+    padding:clamp(2rem, 5vw, 4rem) 10vw;
     gap:5vw;
     background:var(--dark-blue);
 
@@ -13,7 +13,7 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap:10vw;
+    gap:clamp(3rem, 5vw, 10rem);
     color: var(--white);
 }
 
@@ -28,8 +28,9 @@ footer {
 
 .logo-icon-container {
     display: flex;
-    gap:3rem;
+    gap:clamp(2rem, 3vw, 3rem);;
     flex-direction: column;
+    align-items: center;
     justify-content: space-between;
 }
 
@@ -38,9 +39,6 @@ footer {
     color:var(--white);
 }
 
-.footer-logo {
-    width:20rem;
-}
 
 #social-icon-container {
     display: flex;
@@ -99,6 +97,11 @@ footer {
 @media (min-width: 768px) {
     .footer-left {
         flex-direction: row;
+        align-items: flex-start;
+    }
+
+
+    .logo-icon-container {
         align-items: flex-start;
     }
 
