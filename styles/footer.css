@@ -1,55 +1,66 @@
+/*
+# 
+# All the styling for the footer
+#
+*/
+
 footer {
+    padding:clamp(2rem, 5vw, 4rem) 10vw;
+    
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding:clamp(2rem, 5vw, 4rem) 10vw;
-    gap:5vw;
-    background:var(--dark-blue);
+    gap:3rem;
 
+    background:var(--dark-blue);
 }
 
+/*
+#
+# Left side of the footer 
+# Contains: Logo, social icons and the navigation
+#
+*/
 .footer-left {
     display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap:clamp(3rem, 5vw, 10rem);
+
     color: var(--white);
-}
-
-
-
-.footer-right {
-    display: flex;
-    gap:2rem;
-    align-items: center;
-    flex-direction: column;
 }
 
 .logo-icon-container {
     display: flex;
-    gap:clamp(2rem, 3vw, 3rem);;
     flex-direction: column;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
+    gap:clamp(2rem, 3vw, 3rem);    
 }
-
 
 .logo-icon-container path {
     color:var(--white);
 }
 
-
+/* Social icons */
 #social-icon-container {
     display: flex;
     flex-wrap: wrap;
-    gap:0.5rem;
+    gap:1rem;
 }
 
 .social-icon {
-    
-    
-    width:2.5rem;
+    width:30px;
+    height:30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icon svg {
+    transform: scale(1.5);
 }
 
 .social-icon path {
@@ -62,6 +73,7 @@ footer {
     transition: 0.3s;
 }
 
+/* Footer nav */
 .footer-nav-container {
     display:flex;
     flex-direction: column;
@@ -71,16 +83,35 @@ footer {
 
 .footer-nav {
     display: flex;
-    color:var(--white);
-    align-items: center;
     flex-direction: column;
+    align-items: center;
     gap:1rem;
+
+    color:var(--white);
 }
+
 .footer-nav a:hover {
     color: var(--bright-cyan);
 }
 
+/*
+#
+# Right side of the footer
+# Contains: Foot note and Request invite button
+#
+*/
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:2rem;
+}
 
+/*
+#
+# Media queries
+# 
+*/
 @media (min-width: 640px) {
     .footer-nav {
         align-items: flex-start;
@@ -100,18 +131,15 @@ footer {
         align-items: flex-start;
     }
 
-
     .logo-icon-container {
         align-items: flex-start;
     }
 
 }
 
-
 @media (min-width: 1280px) {
     footer {
         flex-direction: row;
-    
     }
 
     .footer-right {
