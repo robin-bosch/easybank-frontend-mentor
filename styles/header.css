@@ -1,34 +1,44 @@
+/*
+# 
+# All the styling for the header
+#
+*/
 header {
-    position:fixed;
-    width:100vw;
+    width:100%;
+    height:5rem;
+
     top:0;
     left:0;
+    padding:0rem 5vw;
+    
+    position:fixed;
+    z-index:2;
     display:flex;
     align-items: center;
-    padding:0rem 5vw;
-    height:5rem;
-    z-index:2;
-    background: var(--white);
     justify-content: space-between;
+    
+    background: var(--white);
+    
+    transform-style: preserve-3d;
 }
 
-
 #header-nav {
-    position: fixed;
     width:90vw;
-    border-radius:5px;
-    padding:2rem;
-    top:-100%;
-    
+    top:-300%;
     margin:0 auto;
+    padding:2rem;
+    border-radius:5px;
+
+    position: fixed;    
     display: flex;
+    flex-direction: column;
     align-items: center;
     gap:1rem;
-    z-index:2;
-    flex-direction: column;
+
     background: var(--white);
+
     transition: 0.5s ease top;
-    
+    transform: translateZ(-5px)
 }
 
 #header-nav.open {
@@ -38,21 +48,27 @@ header {
 
 #header-nav.open + .nav-background {
     content:"";
-    position: fixed;
-    background:rgba(29, 29, 29, 0.308);
+
     width:100vw;
     height:100vh;
     top: 5rem;
-    z-index: 0;
     left:0;
+
+    position: fixed;
+
+    background:rgba(29, 29, 29, 0.308);
+    
     transition: 0s;
+    transform: translateZ(-10px)
 }
 
+#header-btn {
+    display:none;
+}
 
 /**
 *
-* Animated burger button
-*
+* Animated burger 
 */
 #burger-btn {
     display:flex;
@@ -60,51 +76,62 @@ header {
     align-items: center;
     flex-direction: column;
 }
+
 #burger-btn:hover {
     cursor:pointer;
 }
+
 #burger-btn span {
     width:2em;
     height:0.15em;
-    background:black;
     margin:0.2em;
-    transition: 0.3s ease transform, 0.3s ease top, 0.3s ease width, 0.3s ease right;
     border-radius: 5px;
+
+    background:black;
+    
+    transition: 0.3s ease transform, 0.3s ease top, 0.3s ease width, 0.3s ease right;
 }
+
 #burger-btn span:first-child {
     transform: rotateZ(0deg);
     transform-origin: 100%;
     transition-delay: 0.1s;
 }
+
 #burger-btn span:nth-child(2) {
     opacity: 1;
     transition: opacity, 0.1s;
     transition-delay: 0.3s;
 }
+
 #burger-btn span:last-child {
     transform: rotateZ(0deg);
     transform-origin: 100%;
     transition-delay: 0.1s;
 }
+
 #burger-btn.open span:first-child  {
     transform: rotateZ(-45deg) translate(-0.2em, -0.4em);
     transform-origin: 100%;
 }
+
 #burger-btn.open span:nth-child(2) {
     opacity: 0;
     transition: opacity, 0.1s;
-    
 }
+
 #burger-btn.open span:last-child {
     transform: rotateZ(45deg) translate(-0.2em, 0.4em);
     transform-origin: 100%;
-    
 }
 
-
-
+/*
+#
+# Media queries
+#
+*/
 @media (min-width: 1024px) {
-
+    /* Show Request invite button and remove burger button */
     #header-btn {
         display:block;
     }
@@ -114,37 +141,50 @@ header {
     }
 
     #header-nav {
-        display: flex;
+        width:auto;
+        height:100%;
+        top:auto;
+        padding:0 2rem;
+
         position:relative;
         flex-direction: row;
-        align-items: center;
-        top:auto;
-        height:100%;
-        padding:0 2rem;
-        justify-content: center;
+        /* justify-content: center; */
         gap:2rem;
-        width:auto;
+        
+        transform: translateZ(0px)
     }
     
     #header-nav a {
+        height:100%;
+
         display: flex;
-        justify-content: center;
         align-items: center;
         position: relative;
+
         color:var(--grayish-blue);
-        height:100%;
-        width:100%;
     }
     
     #header-nav a:hover::after {
         content:"";
-        position: absolute;
+
+        width:100%;
+        height:4px;
         left:0;
         bottom:0;
-        height:4px;
-        width:100%;
-        transition: 0.3s;
+
+        position: absolute;
+
         background:linear-gradient(to right, var(--lime-green), var(--bright-cyan));
+        
+        transition: 0.3s;
+    }
+
+    /* Fixes the nav to the top even when in opened position */
+    #header-nav.open {
+        top:0rem;
+    }
+    /* Remove background in open position */
+    .nav-background {
+        display: none;
     }
 }
-

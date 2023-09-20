@@ -54,8 +54,11 @@ h3 {
     line-height: 1.25;
 }
 
-/*  */
-
+/*  
+#
+# Intro section
+# 
+*/
 #intro {
     margin-top:5rem;
     display:flex;
@@ -64,7 +67,7 @@ h3 {
     justify-content: space-between;
     align-items: center;
     background: var(--very-light-gray);
-
+    position: relative;
 }
 
 #intro-text {
@@ -100,6 +103,11 @@ h3 {
     bottom:0;
 }
 
+/*
+#
+# Features section
+#
+*/
 #features-section {
     padding:5vw 10vw;
     background: var(--light-grayish-blue);
@@ -122,14 +130,6 @@ h3 {
     gap:2rem;
 }
 
-#header-btn {
-    display:none;
-}
-
-
-
-
-
 .feature {
     display: flex;
     flex-direction: column;
@@ -141,6 +141,12 @@ h3 {
     width:5rem;
     margin-bottom:2rem;
 }
+
+/*
+#
+# Article section
+#
+*/
 
 #article-section {
     padding:5vw 10vw;
@@ -177,8 +183,6 @@ h3 {
     padding:2rem;
 }
 
-
-
 .btn {
     color:var(--white);
     background: linear-gradient(to right, var(--lime-green), var(--bright-cyan));
@@ -187,6 +191,7 @@ h3 {
     border-radius:30px;
     transition: 0.3s;
 }
+
 .btn:hover {
     cursor: pointer;
     background: linear-gradient(to right, hsl(136, 65%, 71%), hsl(192, 70%, 71%));
