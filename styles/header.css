@@ -9,7 +9,7 @@ header {
 
     top:0;
     left:0;
-    padding:0rem 5vw;
+    padding:0rem 10vw;
     
     position:fixed;
     z-index:2;
@@ -26,6 +26,8 @@ header {
     width:90vw;
     top:-300%;
     margin:0 auto;
+    left:0;
+    right:0;
     padding:2rem;
     border-radius:5px;
 

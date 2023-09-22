@@ -51,8 +51,8 @@ footer {
 }
 
 .social-icon {
-    width:30px;
-    height:30px;
+    width:27px;
+    height:27px;
 
     display: flex;
     justify-content: center;
@@ -60,7 +60,7 @@ footer {
 }
 
 .social-icon svg {
-    transform: scale(1.5);
+    transform: scale(1.3);
 }
 
 .social-icon path {
@@ -69,7 +69,7 @@ footer {
 }
 
 .social-icon:hover path {
-    color:var(--bright-cyan);
+    color:var(--lime-green);
     transition: 0.3s;
 }
 
@@ -91,7 +91,7 @@ footer {
 }
 
 .footer-nav a:hover {
-    color: var(--bright-cyan);
+    color: var(--lime-green);
 }
 
 /*
