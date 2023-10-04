@@ -35,21 +35,37 @@ Hover states should be reflected accurately.
 
 The following designs were given to build the project:  
 
-- The Desktop design with a shown width of 1440px  
-![](docs/desktop-design.jpg)  
+<details>
+<summary>The Desktop design with a shown width of 1440px</summary>
 
-- The Mobile design with a shown width of 375px  
-![](docs/mobile-design.jpg)  
+![](docs/desktop-design.jpg)
+</details>
 
-- Hover states  
-![](docs/active-states.jpg)  
+<details>
+<summary>The Mobile design with a shown width of 375px</summary>
 
-- The expanded navigation menu on mobile  
-![](docs/mobile-navigation.jpg)  
+![](docs/mobile-design.jpg)
+</details>
+
+<details>
+<summary>Hover states</summary>
+
+![](docs/active-states.jpg)
+</details>
+
+<details>
+<summary>The expanded navigation menu on mobile </summary>
+
+![](docs/mobile-navigation.jpg)
+</details>
 
 ## My process
 
 ### Challenges
+
+- Getting the hero images to fit on all screen sizes
+- Making sure the text sizes are correct according to the design
+
 
 ### What I learned
 
