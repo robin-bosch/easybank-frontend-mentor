@@ -17,10 +17,12 @@ Designed by Frontend Mentor
     - [What I learned](#what-i-learned)
 - [Technologies used](#technologies-used)
 - [Validation and Testing](#validation-and-testing)
-    -
-- [Author](#author)
-- [Credits](#author)
-- [Acknowledgments](#acknowledgments)
+    - [HTML Validation](#html-validation)
+    - [CSS Validation](#css-validation)
+    - [Accessibility Testing](#accessibility-testing)
+    - [Device Testing](#device-testing)
+- [Useful resources](#useful-resources)
+- [Credits](#credits)
 - [License](#license)
 
 
